@@ -8,7 +8,7 @@ from pyrogram.handlers import MessageHandler
 API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
 BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY', '3494ad69b7c32aa52e71adf0da498357')
+API_KEY = environ.get('API_KEY', '7a08651490b9fdd9f3a85e76079ce4c3')
 
 bot = Client('pdiskshortner bot',
              api_id=API_ID,
