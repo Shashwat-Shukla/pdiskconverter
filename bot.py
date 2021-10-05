@@ -22,7 +22,7 @@ bot = Client('pdiskshortner bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm Pdisk link converter bot. Just send me link and get converted link of pdisk.\n\n Created By @steallootdeal")
+        "I'm Pdisk link converter bot. Just send me link and get converted link of pdisk.\n\n Created By Shashwat Shukla")
 
 @bot.on_message(filters.command('help') & filters.private)
 async def help(bot, message):
@@ -39,7 +39,7 @@ async def link_handler(bot, message):
     session = requests.Session()
     resp = session.head(Link, allow_redirects=True)
     short_link = await post_shortlink(resp.url)
-    shortlink = ('https://www.cofilink.com/share-video?videoid='+short_link)
+    shortlink = ('https://www.pdisks.net/share-video?videoid='+short_link)
     txt = stringliteral.replace(Link, shortlink)
     try:
         await message.reply(f'{txt}', quote=True)
