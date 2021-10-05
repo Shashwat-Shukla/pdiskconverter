@@ -49,7 +49,7 @@ async def link_handler(bot, message):
 
 async def post_shortlink(Link):
     url = 'http://linkapi.net/open/create_item'
-    params = {'api_key': API_KEY, 'content_src': Link, 'link_type': 'link', 'cover_url' : '/steallootdeal.jpeg'}
+    params = {'api_key': API_KEY, 'content_src': Link, 'link_type': 'link'}
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
             data = await response.json()
